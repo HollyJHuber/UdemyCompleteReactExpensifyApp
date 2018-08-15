@@ -9,10 +9,11 @@ import { sortByAmount } from "./actions/filters";
 import getVisibleExpenses from "./selectors/expenses";
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+import './firebase/firebase';
 
 const store = configureStore();
 
-console.log("testing");
+console.log("app.js is running");
 
 const jsx = (
   <Provider store={store}>
