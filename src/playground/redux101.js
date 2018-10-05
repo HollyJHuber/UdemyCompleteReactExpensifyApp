@@ -1,5 +1,10 @@
 import { createStore } from 'redux';
 
+// const store = createStore((state = {count: 0}) => {
+//   return state;
+// });
+// console.log(store.getState());
+
 const incrementCount = ({ incrementBy = 1 } = {}) => ({
   type: 'INCREMENT',
   incrementBy
@@ -45,7 +50,7 @@ const countReducer = (state = { count: 0 }, action) => {
 };
 
 
-const store = createStore();
+const store = createStore(countReducer);
 
 const unsubscribe = store.subscribe(() => {
   console.log(store.getState());
